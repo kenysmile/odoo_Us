@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="nhan_vien_form_view" model="ir.actions.act_window">
+            <field name="name">Nhân viên</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="nhan_vien_inherit_tree" model="ir.ui.view">
+            <field name="name">Nhân viên</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_email']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="string">Họ tên</attribute>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="attributes">
+                    <attribute name="string">Vị trí</attribute>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="mobile_phone" string="Số điện thoại"/>
+                </xpath>
+                <xpath expr="//field[@name='mobile_phone']" position="after">
+                    <field name="calendar_id" string="Thời gian làm việc"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="nhan_vien_inherit_form" model="ir.ui.view">
+            <field name="name">Nhân viên</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//sheet/notebook[1]/page[1]" position="attributes">
+                    <attribute name="string">Thông tin cá nhân</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_email']" position="attributes">
+                    <attribute name="string">Email</attribute>
+                </xpath>
+                <xpath expr="//field[@name='mobile_phone']" position="attributes">
+                    <attribute name="string">Điện thoại</attribute>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="attributes">
+                    <attribute name="string">Vị trí</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/group/group" position="attributes">
+                    <attribute name="string">Thông tin chung</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]/group/group[2]" position="attributes">
+                    <attribute name="string">Thông tin khác</attribute>
+                </xpath>
+                <xpath expr="//field[@name='calendar_id']" position="attributes">
+                    <attribute name="string">Thời gian làm việc</attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="string">Phòng ban</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]" position="attributes">
+                    <attribute name="string">Thông tin cá nhân</attribute>
+                </xpath>
+
+                <xpath expr="//sheet/notebook/page[2]/group/group[2]/field[1]" position="after">
+                    <field name="user_id"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="birthday"/>
+                </xpath>
+
+                <xpath expr="//field[@name='birthday']" position="attributes">
+                    <attribute name="string">Ngày sinh</attribute>
+                </xpath>
+
+                <xpath expr="//sheet/notebook/page[2]/group/group[4]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]/group/group[3]" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='address_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_location']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="company_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="string">Địa điểm</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]/group/group" position="attributes">
+                    <attribute name="string">Chứng minh thư và tài khoản ngân hàng</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='country_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='passport_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='address_home_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='gender']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='marital']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='calendar_id']" position="after">
+                    <field name="mondkdayhoc"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

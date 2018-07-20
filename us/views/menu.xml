@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="thuc_hanh_root_menu" name="Thực hành 1" sequence="1"/>
+            <menuitem id="thuc_hanh_menu" name="Thực hành" parent="thuc_hanh_root_menu"
+                      action="mylib_book_act" sequence="1"/>
+    </data>
+</odoo>

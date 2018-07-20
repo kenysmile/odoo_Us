@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="khoa_hoc_tree" model="ir.ui.view">
+            <field name="name">Khóa học</field>
+            <field name="model">us.khoahoc</field>
+            <field name="arch" type="xml">
+                <tree string="Khóa học">
+                    <field name="malop"/>
+                    <field name="ngaykhaigiang"/>
+                    <field name="ngayketthuc"/>
+                    <field name="sohvdk"/>
+                    <field name="sohvdihoc"/>
+                    <field name="tinhtrang"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="khoa_hoc_view_act" model="ir.actions.act_window">
+            <field name="name">Khóa học</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">us.khoahoc</field>
+            <field name="domain">[('tinhtrang', '!=', 'False')]</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="view_id" ref="khoa_hoc_tree"/>-->
+            <!--<field name="domain">[('tinhtrang', '!=', 'False')]</field>-->
+        </record>
+    </data>
+</odoo>

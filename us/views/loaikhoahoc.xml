@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="loai_khoa_hoc_form_view" model="ir.actions.act_window">
+            <field name="name">Loại khóa học</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="loai_khoa_hoc_form" model="ir.ui.view">
+            <field name="name">Loại khóa học</field>
+            <field name="model">product.category</field>
+            <field name="arch" type="xml">
+                <form string="Loại khóa học">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Category name"/>
+                        </group>
+                        <group>
+                            <field name="parent_id" string="Danh mục cha"/>
+                        </group>
+                        <group>
+                            <field name="dsgiaovien"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+        <!--<record id="loai_khoa_hoc_inherit_form" model="ir.ui.view">-->
+            <!--<field name="name">Loại khóa học</field>-->
+            <!--<field name="model">product.category</field>-->
+            <!--<field name="inherit_id" ref="product.product_category_form_view"/>-->
+            <!--<field name="arch" type="xml">-->
+
+                <!--<xpath expr="//field[@name='type']" position="attributes">-->
+                    <!--<attribute name="string">Danh mục cha</attribute>-->
+                    <!--&lt;!&ndash; Add your fields or attributes here &ndash;&gt;-->
+                <!--</xpath>-->
+
+                <!--<xpath expr="//sheet/group" position="attributes">-->
+                    <!--<attribute name="invisible">True</attribute>-->
+                <!--</xpath>-->
+            <!--</field>-->
+        <!--</record>-->
+
+    </data>
+</odoo>

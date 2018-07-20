@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="lich_hoc_view_act" model="ir.actions.act_window">
+            <field name="name">Lịch học</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">us.lichhoc</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="lich_hoc_tree" model="ir.ui.view">
+            <field name="name">Lịch học</field>
+            <field name="model">us.lichhoc</field>
+            <field name="arch" type="xml">
+                <tree string="Lịch học">
+                    <field name="khoahoc"/>
+                    <field name="gio_1" widget="many2many_tags"/>
+                    <field name="gio_2" widget="many2many_tags"/>
+                    <field name="gio_3" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

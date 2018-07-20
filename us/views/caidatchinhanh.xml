@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="cai_dat_chi_nhanh_view_act" model="ir.actions.act_window">
+            <field name="name">Cài đặt chi nhánh</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">us.caidatchinhanh</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>
