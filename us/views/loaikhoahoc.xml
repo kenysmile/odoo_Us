@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <record id="loai_khoa_hoc_form_view" model="ir.actions.act_window">
+        <record id="loai_khoa_hoc_view_act" model="ir.actions.act_window">
             <field name="name">Loại khóa học</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">product.category</field>

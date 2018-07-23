@@ -2,8 +2,24 @@
 <odoo>
     <data>
 
-        <menuitem id="thuc_hanh_root_menu" name="Thực hành 1" sequence="1"/>
-            <menuitem id="thuc_hanh_menu" name="Thực hành" parent="thuc_hanh_root_menu"
-                      action="mylib_book_act" sequence="1"/>
+        <menuitem id="Us_root_menu" name="Us" sequence="1"/>
+            <menuitem id="nhan_vien_menu" name="Nhân viên" parent="Us_root_menu"
+                      action="nhan_vien_view_act" sequence="1"/>
+            <menuitem id="loai_khoa_hoc_menu" name="Loại khóa học" parent="Us_root_menu"
+                      action="loai_khoa_hoc_view_act" sequence="5"/>
+            <menuitem id="lich_hoc_menu" name="Lịch học" parent="Us_root_menu"
+                      action="lich_hoc_view_act" sequence="10"/>
+            <menuitem id="cai_dat_chi_nhanh_menu" name="Cài đặt chi nhánh" parent="Us_root_menu"
+                      action="cai_dat_chi_nhanh_view_act" sequence="15"/>
+            <menuitem id="phong_hoc_menu" name="Phòng học" parent="Us_root_menu"
+                      action="phong_hoc_view_act" sequence="20"/>
+            <menuitem id="khoa_hoc_menu" name="Khóa học" parent="Us_root_menu"
+                      action="khoa_hoc_view_act" sequence="25"/>
+            <menuitem id="thu_menu" name="Thứ" parent="Us_root_menu"
+                      action="thu_view_act" sequence="30"/>
+            <!--<menuitem id="lich_day_menu" name="Lịch dạy" parent="Us_root_menu"-->
+                      <!--action="lich_day_view_act" sequence="35"/>-->
+            <menuitem id="dang_ky_lich_day_menu" name="Đăng kí lịch day" parent="Us_root_menu"
+                      action="dang_ky_lich_day_view_act" sequence="40"/>
     </data>
 </odoo>
