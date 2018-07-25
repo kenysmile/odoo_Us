@@ -11,4 +11,4 @@ class Khoahoc(models.Model):
     ngayketthuc = fields.Date(string='Ngày kết thúc')
     sohvdk = fields.Integer(string='Số học viên đăng ký')
     sohvdihoc = fields.Integer(string='Số học viên đi học')
-    tinhtrang = fields.Selection([('1', 'Đang diễn ra'), ('2', 'Chưa bắt đầu')], 'Tình trạng')
+    tinhtrang = fields.Char('Tình trạng')

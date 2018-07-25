@@ -10,7 +10,7 @@
 
 """,
     'data': [
-             # 'views/lichday.xml',
+             'views/lichday.xml',
              'views/dangkylichday.xml',
              'views/thu.xml',
              'views/lichhoc.xml',

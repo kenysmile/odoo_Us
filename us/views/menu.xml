@@ -17,8 +17,8 @@
                       action="khoa_hoc_view_act" sequence="25"/>
             <menuitem id="thu_menu" name="Thứ" parent="Us_root_menu"
                       action="thu_view_act" sequence="30"/>
-            <!--<menuitem id="lich_day_menu" name="Lịch dạy" parent="Us_root_menu"-->
-                      <!--action="lich_day_view_act" sequence="35"/>-->
+            <menuitem id="lich_day_menu" name="Lịch dạy" parent="Us_root_menu"
+                      action="lich_day_view_act" sequence="35"/>
             <menuitem id="dang_ky_lich_day_menu" name="Đăng kí lịch day" parent="Us_root_menu"
                       action="dang_ky_lich_day_view_act" sequence="40"/>
     </data>
